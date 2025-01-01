@@ -1,0 +1,199 @@
+/*
+    How to CSS: A short tutorial.
+elementName{
+    property = state
+
+    - The element "body" is the ENTIRE website!!! :D
+}
+*/
+
+
+/* ======================================== */
+/*      Import(s) & Variable(s) Section     */
+/* ======================================== */
+
+:root{
+    --offBlack: #1e1e1e;
+    --offWhite: #fafafa;
+    --purple3:  #643988;
+    --purple2:  #bc88f3;
+    --purple1:  #d5bcff;
+    --pink3:    #fe7cb0;
+    --pink2:    #ffafcf;
+    --pink1:    #ffd1e4;
+    --blue3:    #142258;
+    --blue2:    #53B5F2;
+    --blue1:    #C0E7FF;
+}   
+
+@font-face{
+    font-family: 'Newsreader';
+    src: url('fonts/Newsreader/Newsreader_VariableFont.ttf') format("truetype-variations");
+    font-weight: 100 1000;
+    /*the changable variables are 'opsz' & 'wght' */
+}
+
+
+/* ======== END of Variables ======= */
+
+
+
+/* CSS - Entire Website, "Body" */
+
+
+body{
+    margin: 0;
+    font-family: 'Newsreader', serif;
+    font-variation-settings: 'wght' 400, 'opsz' 64;
+}
+
+:link{
+    color: var(--pink1)
+}
+
+
+
+/* === END of "Body" === */
+
+
+/* CSS - Heading Section */
+header{
+    background-color: var(--blue3);
+    color: var(--blue1);
+    padding-left: 5%;
+    padding-right: 4%;
+    /* Margin needs to be changed in the body, not header. */
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.navHome{
+    font-size: 1.5em;
+    font-weight: 2em;
+}
+
+.navBar{
+    margin-left: auto;
+}
+
+.navSearch{
+    padding: 5%;
+}
+/* ====== END of Header Section ====== */
+
+
+/* CSS - Main Section */
+.mainText{
+    padding-top: 1em;
+    text-align: center;
+
+    background: linear-gradient(--pink1, --blue1);
+    background-size: 200% 200%;
+}
+
+.socialLink{
+    display: flex;
+    justify-content: space-between;
+    max-width: 6em;
+}
+
+.socialIcon{
+    width: 35px;
+}
+
+h2{
+    font-size: 2.5em;
+    padding: 2em;
+}
+
+.magicClick{
+    align-items: center;
+    border-radius: 0.75em;
+    display: inline-block;
+
+    color: var(--offWhite);
+    background-color: var(--pink2);
+    border-color: var(--offBlack);
+    border-width: 2em;
+    
+    font-size: 1.5em;
+
+    padding: 0.5em 2.5em;
+    padding-top: 0.55em;
+    margin-bottom: 3em;
+  
+    text-decoration: none;
+}
+
+.magicClick:hover{
+    background-color: var(--blue2);
+}
+
+.magicClick:active{
+    background-color: var(--blue3);
+}
+
+/*   Background Gradients  */
+.mainBackground{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    z-index: -1;
+}
+
+.mainBackgroundBlob1{
+    content: '';
+    background: var(--pink1);
+    display: block;
+    width: 50%;
+    height: 80%;
+    border-radius: 1000px;
+
+    position: absolute;
+    right: 1em;
+    filter: blur(50px) opacity(70%);
+}
+
+.mainBackgroundBlob2{
+    content: '';
+    background: var(--blue2);
+    display: block;
+    width: 40%;
+    height: 60%;
+    border-radius: 100%;
+
+    position: absolute;
+    left: 1em;
+    filter: blur(50px) opacity(30%);
+}
+
+.mainBackgroundBlob3{
+    content: '';
+    background: var(--blue1);
+    display: block;
+    
+    width: 100%;
+    height: 100%;
+    filter: opacity(30%);
+    z-index: -1;
+
+}
+
+/* ====== END of Main Section ====== */
+
+
+
+/* CSS- Footer Section */
+footer{
+    padding: 1%;
+    text-align: center;
+}
+
+/* ====== END of Footer Section ====== */
